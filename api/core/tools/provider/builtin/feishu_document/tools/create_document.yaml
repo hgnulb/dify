@@ -1,0 +1,47 @@
+identity:
+  name: create_document
+  author: Doug Lea
+  label:
+    en_US: Create Document
+    zh_Hans: 创建文档，支持创建空文档和带内容的文档，支持 markdown 语法创建。
+description:
+  human:
+    en_US: create document
+    zh_Hans: 创建文档，支持创建空文档和带内容的文档，支持 markdown 语法创建。
+  llm:
+parameters:
+  - name: tenant_access_token
+    type: string
+    required: true
+    label:
+      en_US: tenant access token
+      zh_Hans: 访问凭证
+    human_description:
+      en_US:
+      zh_Hans: tenant_access_token 是租户访问凭证
+    llm_description:
+    form: llm
+
+  - name: title
+    type: string
+    required: true
+    label:
+      en_US: Document Title
+      zh_Hans: 文档标题，只支持纯文本。
+    human_description:
+      en_US: Document title, only supports plain text.
+      zh_Hans: 文档标题，只支持纯文本。
+    llm_description:
+    form: llm
+
+  - name: content
+    type: string
+    required: true
+    label:
+      en_US: document content
+      zh_Hans: 文档内容，支持 markdown 语法，可以为空。
+    human_description:
+      en_US: Document content, supports markdown syntax, can be empty.
+      zh_Hans: 文档内容，支持 markdown 语法，可以为空。
+    llm_description:
+    form: llm

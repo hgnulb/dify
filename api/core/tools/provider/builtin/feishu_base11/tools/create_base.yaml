@@ -1,0 +1,23 @@
+identity:
+  name: create_base
+  author: Doug Lea
+  label:
+    en_US: Create Base App
+    zh_Hans: 创建多维表格app
+description:
+  human:
+    en_US: Create a multidimensional table in the root directory of the cloud space.
+    zh_Hans: 在云空间根目录下创建多维表格
+  llm: A tool for create a multidimensional table app.
+parameters:
+  - name: name
+    type: string
+    required: false
+    label:
+      en_US: name
+      zh_Hans: name
+    human_description:
+      en_US: Base App Name
+      zh_Hans: 多维表格App名称
+    llm_description: Base App Name
+    form: llm

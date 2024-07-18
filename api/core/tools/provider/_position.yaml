@@ -28,5 +28,13 @@
 - qrcode
 - dingtalk
 - feishu
+- feishu_auth
+- feishu_document
+- feishu_message
+- feishu_bitable
+- feishu_wiki
+- feishu_task
+- feishu_sheet
+- feishu_calendar
 - feishu_base
 - slack

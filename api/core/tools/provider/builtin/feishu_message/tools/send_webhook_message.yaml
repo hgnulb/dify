@@ -1,0 +1,57 @@
+identity:
+  name: send_webhook_message
+  author: Doug Lea
+  label:
+    en_US: Send Webhook Message
+    zh_Hans: 使用自定义机器人发送飞书消息
+description:
+  human:
+    en_US: send webhook message
+    zh_Hans: |
+      使用自定义机器人发送飞书消息
+  llm:
+parameters:
+  - name: key
+    type: string
+    required: true
+    label:
+      en_US: webhook key
+      zh_Hans: webhook 地址的 key
+    human_description:
+      en_US: The key of the webhook address
+      zh_Hans: webhook 地址的 key
+    llm_description:
+    form: llm
+
+  - name: msg_type
+    type: string
+    required: true
+    options:
+      - value: text
+        label:
+          en_US: text
+          zh_Hans: 文本
+      - value: interactive
+        label:
+          en_US: message card
+          zh_Hans: 消息卡片
+    label:
+      en_US: app_secret
+      zh_Hans: 消息类型，可选值有：text、interactive。
+    human_description:
+      en_US: Message type, optional values are text:text, interactive:message card.
+      zh_Hans: 消息类型，可选值有：text-文本、interactive-消息卡片。
+    llm_description:
+    form: llm
+
+  - name: content
+    type: string
+    required: true
+    label:
+      en_US: Message content
+      zh_Hans: 消息内容，格式为 json 字符串。
+    human_description:
+      en_US: Message content, in json string format.
+      zh_Hans: 消息内容，格式为 json 字符串。
+    llm_description:
+    form: llm

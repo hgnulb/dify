@@ -1,0 +1,14 @@
+identity:
+  author: Doug Lea
+  name: feishu_message
+  label:
+    en_US: Lark Message
+    zh_Hans: 飞书消息
+  description:
+    en_US: lark message
+    zh_Hans: 飞书消息
+  icon: icon.svg
+  tags:
+    - social
+    - productivity
+credentials_for_provider:

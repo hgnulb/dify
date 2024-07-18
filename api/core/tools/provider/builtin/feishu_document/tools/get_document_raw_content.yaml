@@ -1,0 +1,102 @@
+identity:
+  name: send_bot_message
+  author: Doug Lea
+  label:
+    en_US: Send Bot Message
+    zh_Hans: 发送飞书应用消息
+description:
+  human:
+    en_US: send bot message
+    zh_Hans: |
+      发送飞书应用消息
+  llm:
+parameters:
+  - name: tenant_access_token
+    type: string
+    required: true
+    label:
+      en_US: tenant access token
+      zh_Hans: 访问凭证
+    human_description:
+      en_US:
+      zh_Hans: tenant_access_token 是租户访问凭证
+    llm_description:
+    form: llm
+
+  - name: receive_id_type
+    type: select
+    required: true
+    options:
+      - value: open_id
+        label:
+          en_US: open id
+          zh_Hans: open id
+      - value: union_id
+        label:
+          en_US: union id
+          zh_Hans: union id
+      - value: user_id
+        label:
+          en_US: user id
+          zh_Hans: user id
+      - value: email
+        label:
+          en_US: email
+          zh_Hans: email
+      - value: chat_id
+        label:
+          en_US: chat id
+          zh_Hans: chat id
+    label:
+      en_US: User ID Type
+      zh_Hans: 用户 ID 类型，可选值有 open_id、union_id、user_id、email、chat_id。
+    human_description:
+      en_US: user id type
+      zh_Hans: 用户 ID 类型，可选值有 open_id、union_id、user_id、email、chat_id。
+    llm_description:
+    form: llm
+
+  - name: receive_id
+    type: string
+    required: true
+    label:
+      en_US: Receive Id
+      zh_Hans: 消息接收者的 ID，ID 类型应与查询参数 receive_id_type 对应。
+    human_description:
+      en_US: The ID of the message receiver. The ID type should correspond to the query parameter receive_id_type.
+      zh_Hans: 消息接收者的 ID，ID 类型应与查询参数 receive_id_type 对应。
+    llm_description:
+    form: llm
+
+  - name: msg_type
+    type: string
+    required: true
+    options:
+      - value: text
+        label:
+          en_US: text
+          zh_Hans: 文本
+      - value: interactive
+        label:
+          en_US: message card
+          zh_Hans: 消息卡片
+    label:
+      en_US: app_secret
+      zh_Hans: 消息类型，可选值有：text、interactive。
+    human_description:
+      en_US: Message type, optional values are text:text, interactive:message card.
+      zh_Hans: 消息类型，可选值有：text-文本、interactive-消息卡片。
+    llm_description:
+    form: llm
+
+  - name: content
+    type: string
+    required: true
+    label:
+      en_US: Message content
+      zh_Hans: 消息内容，格式为 json 字符串。
+    human_description:
+      en_US: Message content, in json string format.
+      zh_Hans: 消息内容，格式为 json 字符串。
+    llm_description:
+    form: llm

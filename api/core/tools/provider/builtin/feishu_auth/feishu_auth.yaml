@@ -1,0 +1,14 @@
+identity:
+  author: Doug Lea
+  name: feishu_auth
+  label:
+    en_US: Lark authentication and authorization
+    zh_Hans: 飞书认证及授权
+  description:
+    en_US: lark authentication and authorization
+    zh_Hans: 飞书认证及授权
+  icon: icon.svg
+  tags:
+    - social
+    - productivity
+credentials_for_provider:
